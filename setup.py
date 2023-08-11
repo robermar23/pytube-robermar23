@@ -14,17 +14,17 @@ with open(os.path.join(here, "pytube", "version.py")) as fp:
     exec(fp.read())
 
 setup(
-    name="pytube",
+    name="pytube-robermar23",
     version=__version__,  # noqa: F821
-    author="Ronnie Ghose, Taylor Fox Dahlin, Nick Ficano",
-    author_email="hey@pytube.io",
+    author="Robert Evans",
+    author_email="robermar2@gmail.com",
     packages=["pytube", "pytube.contrib"],
     package_data={"": ["LICENSE"],},
     url="https://github.com/pytube/pytube",
     license="The Unlicense (Unlicense)",
     entry_points={
         "console_scripts": [
-            "pytube = pytube.cli:main"],},
+            "pytube_robermar23 = pytube.cli:main"],},
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
@@ -55,4 +55,5 @@ setup(
         "Read the Docs": "https://pytube.io",
     },
     keywords=["youtube", "download", "video", "stream",],
+    setup_requires=['wheel', 'twine'],
 )

@@ -2,7 +2,7 @@ dev:
 	pipenv install --dev
 
 pipenv:
-	pip install pipenv
+	pip3 install pipenv
 	pipenv install --dev
 
 deploy-patch: clean requirements bumpversion-patch upload clean
@@ -30,8 +30,8 @@ bumpversion-major:
 	git push --tags
 
 upload:
-	python setup.py sdist bdist_wheel
-	twine upload dist/*
+	python3 setup.py sdist bdist_wheel
+	twine upload --verbose dist/*
 
 help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
@@ -63,4 +63,4 @@ clean-pyc:
 	find . -name '__pycache__' -exec rm -fr {} +
 
 install: clean
-	python setup.py install
+	python3 setup.py install
